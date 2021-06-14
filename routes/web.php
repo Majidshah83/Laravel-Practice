@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 // Route::resource('product',ProductdetailController::class);
-Route::resource('banner',BannerController::class);
+Route::resource('banner',BannerController::class); //first we can define route like this
+// Route::resource('banner','App\Http\Controllers\BannerController'); also we define route like this as well
