@@ -21,6 +21,10 @@ class BannerController extends Controller
        // return view('Banner.banner', compact('banners')); The compact() function creates an array from variables and their values.
     // $banners=Banner::where('name','p1')->first(); //where query
     //$banners=Banner::find(1);//find data through primry key
+    // $banners=Banner::where('name','=','majid')->firstOr
+    // (function(){
+    //     echo "majid name not found";
+    // });
     $banners=Banner::all();
     // return view('Banner.banner', compact('banner'));
     return view('Banner.banner',['banners'=>$banners]);
