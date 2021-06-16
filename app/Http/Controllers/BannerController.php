@@ -59,13 +59,21 @@ class BannerController extends Controller
     //  $banners->image=$image;
     //  $banners->save();
 
-    Insert new data on Create meathod
+   // Insert new data on Create meathod
 
-    $banners=Banner::create([
-        'name'=>'talha',
-        'image'=>'t.jpg',
-    ]);
-    $banners->save();
+    // $banners=Banner::create([
+    //     'name'=>'talha',
+    //     'image'=>'t.jpg',
+    // ]);
+    // $banners->save();
+
+    //Delete method
+    // $banners=Banner::find(7);
+    // $banners->delete();
+
+    //Delete using destroy method
+     $banners=Banner::destroy(11);
+     dd($banners);
     return view('Banner.banner',['banners'=>$banners]);
 
     }
