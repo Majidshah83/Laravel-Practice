@@ -38,11 +38,23 @@ class BannerController extends Controller
     // );
     // return view('Banner.banner', compact('banner'));
 
-    $banners=Banner::firstOrNew( //firstOrNew only return object vlaue not save in data if want save then call save()
-     ['name'=>'Majid SHAH'],
-     ['image'=>'banne.jpg']
-    );
-    $banners->save();
+    // $banners=Banner::firstOrNew( //firstOrNew only return object vlaue not save in data if want save then call save()
+    //  ['name'=>'Majid SHAH'],
+    //  ['image'=>'banne.jpg']
+    // );
+    // $banners->save();
+
+    //Insert new record to type insert
+    // $banners=new Banner();
+    // $banners->name="Alishah";
+    // $banners->image="ali.jpg";
+    // $banners->save();
+     $name='zahid';
+     $image='z.jpg';
+     $banners=new Banner();
+     $banners->name=$name;
+     $banners->image=$image;
+     $banners->save();
     return view('Banner.banner',['banners'=>$banners]);
 
     }
