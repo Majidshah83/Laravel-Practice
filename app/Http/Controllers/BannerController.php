@@ -15,21 +15,34 @@ class BannerController extends Controller
     public function index()
     {
         // $banners=Banner::all();
+
         // dd($banners);
+
         // $banners=Banner::all()->count(); count data in database
+
        //dd($banners);  dd One of the most popular way of debugging in PHP still remains the same – showing variables in the browser, Dump and Die
+
        // return view('Banner.banner', compact('banners')); The compact() function creates an array from variables and their values.
+
     // $banners=Banner::where('name','p1')->first(); //where query
+
     //$banners=Banner::find(1);//find data through primry key
+
     // $banners=Banner::where('name','=','majid')->firstOr
     // (function(){
     //     echo "majid name not found";
     // });
-    $banners=Banner::firstOrCreate(     //firstOrCreat function if data not found then they create data and retrive data
-        ['name'=>'Majid'],
-        ['image'=>'banner.jpg']
-    );
+    // $banners=Banner::firstOrCreate(     //firstOrCreat function if data not found then they create data and retrive data
+    //     ['name'=>'Majid'],
+    //     ['image'=>'banner.jpg']
+    // );
     // return view('Banner.banner', compact('banner'));
+
+    $banners=Banner::firstOrNew( //firstOrNew only return object vlaue not save in data if want save then call save()
+     ['name'=>'Majid SHAH'],
+     ['image'=>'banne.jpg']
+    );
+    $banners->save();
     return view('Banner.banner',['banners'=>$banners]);
 
     }
