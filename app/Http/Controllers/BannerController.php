@@ -68,8 +68,8 @@ class BannerController extends Controller
     // $banners->save();
 
     //Delete method
-    // $banners=Banner::find(7);
-    // $banners->delete();
+    $banners=Banner::find(7);
+    $banners->delete();
 
     //Delete using destroy method
      $banners=Banner::destroy(11);
