@@ -19,8 +19,9 @@ class BannerController extends Controller
         // $banners=Banner::all()->count(); count data in database
        //dd($banners);  dd One of the most popular way of debugging in PHP still remains the same – showing variables in the browser, Dump and Die
        // return view('Banner.banner', compact('banners')); The compact() function creates an array from variables and their values.
-    $banner=Banner::all();
-    return view('Banner.banner', compact('banner'));
+    $banners=Banner::all();
+    // return view('Banner.banner', compact('banner'));
+    return view('Banner.banner',['banners'=>$banners]);
     }
     /**
      * Show the form for creating a new resource.
