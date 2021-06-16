@@ -25,7 +25,10 @@ class BannerController extends Controller
     // (function(){
     //     echo "majid name not found";
     // });
-    $banners=Banner::all();
+    $banners=Banner::firstOrCreate(     //firstOrCreat function if data not found then they create data and retrive data
+        ['name'=>'Majid'],
+        ['image'=>'banner.jpg']
+    );
     // return view('Banner.banner', compact('banner'));
     return view('Banner.banner',['banners'=>$banners]);
 

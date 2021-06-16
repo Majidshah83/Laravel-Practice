@@ -8,10 +8,10 @@
 </head>
 <body>
 <!-- @foreach($banners as $user)
-<h1>{{$user->image}}</h1>
-<h1>{{$user->name}}</h1>
+<h1>{{$banners->name}}</h1>
+<h1>{{$banners->image}}</h1>
 @endforeach -->
-<!-- <h1{{$user->image}}</h1> find() and where query
-<h1>{{$user->name}}</h1> -->
+<h1>{{$banners->name}}</h1>
+<h1>{{$banners->image}}</h1>
 </body>
 </html>

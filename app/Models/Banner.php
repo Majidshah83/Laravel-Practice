@@ -10,7 +10,7 @@ class Banner extends Model
     use HasFactory;
     protected $fillable = [
     'name',
-    'iamge',                 // uploaded the image
+    'image',
 
   ];
 }
