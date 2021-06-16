@@ -49,12 +49,23 @@ class BannerController extends Controller
     // $banners->name="Alishah";
     // $banners->image="ali.jpg";
     // $banners->save();
-     $name='zahid';
-     $image='z.jpg';
-     $banners=new Banner();
-     $banners->name=$name;
-     $banners->image=$image;
-     $banners->save();
+
+    //second method of insert
+
+    //  $name='ziam';
+    //  $image='z.jpg';
+    //  $banners=new Banner();
+    //  $banners->name=$name;
+    //  $banners->image=$image;
+    //  $banners->save();
+
+    Insert new data on Create meathod
+
+    $banners=Banner::create([
+        'name'=>'talha',
+        'image'=>'t.jpg',
+    ]);
+    $banners->save();
     return view('Banner.banner',['banners'=>$banners]);
 
     }
